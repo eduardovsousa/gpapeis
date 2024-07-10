@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dx-datagrid .dx-row.dx-data-row {
+  @apply !bg-white dark:!bg-dark-gray; 
+  @apply !text-light-dark dark:!text-white;
+}
+
+.dx-datagrid .dx-header-row, .dx-page-sizes, .dx-page-indexes {
+  @apply !text-light-dark dark:!text-white;
+}
+
+.dx-texteditor-input, .dx-texteditor-buttons-container {
+  @apply dark:!bg-[#232323];
+  @apply !rounded-none;
+}
+
+.dx-pager.dx-light-mode .dx-page-indexes, .dx-selectbox .dx-texteditor-input:read-only {
+  @apply dark:!text-white !text-dark;
+}
+
+.dx-pager.dx-light-mode .dx-page-index {
+  @apply !bg-purple;
+  @apply !text-white
+}
+
+.dx-datagrid-headers, .dx-datagrid-borders .dx-datagrid-rowsview, .dx-datagrid-headers+.dx-datagrid-rowsview {
+  @apply !border-none;
+  @apply !rounded-none;
+}
+
+.dx-datagrid-headers+.dx-datagrid-rowsview {
+  @apply !rounded-none;
+}
+
+.dx-editor-with-menu .dx-filter-menu .dx-menu-item-content .dx-icon.dx-icon-filter-operation-default, .dx-filter-menu .dx-menu-item-content .dx-icon.dx-icon-filter-operation-default {
+  @apply dark:!text-white;
+  @apply !mb-3;
+}
+
+.dx-toolbar-items-container, .dx-datagrid-header-panel {
+  @apply dark:!bg-[#232323];
+}
+
+.dx-datagrid-headers .dx-datagrid-content {
+  @apply !rounded-tl-md;
+  @apply !rounded-tr-md;
+}
+
+.custom-last-td {
+  @apply !rounded-tr-lg
+}
+
+.dx-datagrid-content .dx-datagrid-table .dx-row >td {
+  @apply !text-center;
+  @apply !font-bold;
+  @apply !border-none;
+  @apply !align-middle;
+}
+
+.dx-datagrid .dx-header-filter-empty, .dx-datebox-date .dx-dropdowneditor-icon {
+  @apply !text-medium-gray dark:!text-white;
+  @apply hover:!opacity-20;
+}
+
+.dx-dropdowneditor-icon {
+  @apply hover:!bg-transparent;
+}
+
+.dx-datagrid.dx-filter-menu .dx-menu-item-has-icon .dx-icon {
+  @apply !text-2xl;
+}
+
+.dx-datagrid-group-panel .dx-group-panel-message {
+  @apply !font-bold;
+  @apply !text-dark-gray;
+  @apply !text-lg;
+}
+
+.dark .dx-datagrid-group-panel .dx-group-panel-message, .dx-widget input {
+  @apply !text-white;
+}
+ .dx-widget::before {
+  @apply !border-none;
+  @apply !rounded-tl-xl;
+}
+
+.dx-datagrid-header-panel {
+  @apply !border-none;
+}
+
+.dx-datagrid-pager {
+  @apply !p-3;
+  @apply !border-none;
+}
+
+.dx-pager .dx-page-sizes .dx-selection {
+  @apply !text-white;
+  @apply !bg-purple;
+  @apply !rounded-tl-md;
+  @apply !rounded-bl-md;
+}
+
+.dx-pager .dx-pages .dx-selection {
+  @apply !text-white;
+  @apply !bg-purple;
+  @apply !border-none;
+}
+
+.dx-datagrid-rowsview .dx-selection.dx-row:not(.dx-row-focused)>td {
+  @apply !bg-transparent;
+}
+
+.dx-filter-menu.dx-menu .dx-menu-item .dx-menu-item-content {
+  @apply !p-0;
+}
+
+.dx-datagrid-headers .dx-texteditor-input, .dx-texteditor-input {
+  @apply dark:!text-white;
+}
+
+.dx-scrollable-container {
+  @apply !overflow-y-hidden;
+}
+
+.dx-datagrid-columns-separator-transparent {
+  @apply !h-0;
+}
+
+.dx-dropdowneditor-button {
+  @apply !bg-white dark:!bg-[#232323];
+}
+
+
+tr.dx-row.dx-column-lines.dx-header-row {
+  @apply !bg-purple;
+  @apply !text-white;
+  @apply !uppercase;
+  @apply !font-semibold;
+}
+div > .dx-hidden, .dx-state-invisible {
+  @apply !block;
+  @apply !visible;
+}
+
+
+@media (min-width: 1024px) {
+  html > body > div > div > div > div > div > div > div > div > div > div > div {
+    @apply dark:!bg-[#232323];
+    @apply !rounded-bl-md;
+    @apply !rounded-br-md;
+  }
+  
+  html > body > div > div > div > div > div > div > div > div > div > div > div > div > div > div > div > table > tbody > tr:nth-child(even) > td:nth-child(-n+7) {
+    @apply dark:!bg-[#232323];
+  }
+}
