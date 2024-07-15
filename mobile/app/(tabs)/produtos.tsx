@@ -193,7 +193,11 @@ const ProdutosScreen = () => {
     >
       {isAddingProduct ? (
         <View style={{ flex: 1 }}>
-          <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
+          <ScrollView
+            contentContainerStyle={{ flexGrow: 1 }}
+            showsVerticalScrollIndicator={false}
+            showsHorizontalScrollIndicator={false}
+          >
             <ProductForm
               onAddProduct={
                 selectedProduct ? handleUpdateProduct : handleAddProduct
