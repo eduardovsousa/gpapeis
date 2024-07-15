@@ -8,9 +8,13 @@ import Menu from "@/components/icons/Menu";
 import Product from "@/components/icons/Product";
 import { usePathname } from "next/navigation";
 import { cn } from "@/utils/cs";
+import useProductsController from "../../produtos/actions";
 
 export default function Nav() {
   const pathname = usePathname();
+  const {
+    isModalOpen,
+  } = useProductsController();
 
   const inactiveLink = <div className="opacity-0 " />;
   const activeLinkDesk = (
@@ -19,7 +23,7 @@ export default function Nav() {
 
   return (
     <aside className="w-full fixed lg:relative bottom-0 lg:max-w-16 z-50">
-      <nav className="bg-[#F5F5F5] dark:bg-dark lg:bg-transparent p-2 flex lg:flex-col items-center justify-center lg:justify-start gap-4  max-h-14 lg:max-h-full h-full">
+      <nav className={cn("bg-[#F5F5F5] dark:bg-dark lg:bg-transparent p-2 flex lg:flex-col items-center justify-center lg:justify-start gap-4  max-h-14 lg:max-h-full h-full", isModalOpen ? 'blur-sm' : '' )}>
         <Link href={"/dashboard"} className="hidden lg:block">
           <Logo className="w-10 h-10 mt-1" />
         </Link>
