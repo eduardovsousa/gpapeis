@@ -1,6 +1,6 @@
 # Guapi Papeis
 
-Projeto feito para o teste da Guapi Papeis, que utiliza Next.js no frontend, React Native no mobile e Nest.js no backend, com TypeScript.
+Projeto feito para a Guapi Papeis, que utiliza Next.js no frontend, React Native no mobile e Nest.js no backend, com TypeScript.
 
 ## Pré-requisitos
 
@@ -130,6 +130,10 @@ Certifique-se de ter o Node.js e npm instalados em sua máquina.
   - zod
 
 - **Mobile:**
+  - AsyncStorage
+  - Expo
+  - Image Picker
+  - SVG
 
 - **Backend:**
 
