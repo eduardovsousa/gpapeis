@@ -1,6 +1,6 @@
-import { useNavigationState } from '@react-navigation/native';
 import { StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { useNavigationState } from '@react-navigation/native';
 import HomeIcon from '../icons/Home';
 import MenuIcon from '../icons/Menu';
 import ProductIcon from '../icons/Product';
@@ -51,11 +51,13 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     alignItems: 'center',
-    padding: 10,
+    paddingLeft: 20,
+    paddingTop: 20,
+    height: 'auto',
   },
   title: {
     color: 'white',
-    marginLeft: 10,
+    marginLeft: 8,
     fontSize: 18,
   },
 });

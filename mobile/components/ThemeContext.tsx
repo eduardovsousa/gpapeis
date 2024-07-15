@@ -7,13 +7,13 @@ type Theme = 'light' | 'dark';
 
 interface ThemeContextType {
   colorScheme: Theme;
-  textColor: string; // Added for dynamic text color
+  textColor: string; 
   toggleTheme: () => void;
 }
 
 const ThemeContext = createContext<ThemeContextType>({
   colorScheme: 'light',
-  textColor: 'black', // Default text color
+  textColor: 'black',
   toggleTheme: () => {},
 });
 
@@ -49,7 +49,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     setColorScheme(prev => (prev === 'light' ? 'dark' : 'light'));
   };
 
-  const textColor = colorScheme === 'dark' ? 'white' : 'black'; // Dynamic text color
+  const textColor = colorScheme === 'dark' ? 'white' : 'black';
 
   return (
     <ThemeContext.Provider value={{ colorScheme, textColor, toggleTheme }}>

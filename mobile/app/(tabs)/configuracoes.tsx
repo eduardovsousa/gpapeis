@@ -1,18 +1,19 @@
-import { useTheme } from '@/components/ThemeContext';
-import ThemeSwitch from '@/components/ThemeSwitch';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View } from "react-native";
+
+import { useTheme } from "@/components/ThemeContext";
+import ThemeSwitch from "@/components/ThemeSwitch";
 
 const ConfiguracoesScreen = () => {
   const { colorScheme } = useTheme();
-  const isDarkMode = colorScheme === 'dark';
+  const isDarkMode = colorScheme === "dark";
+  const backgroundColor = isDarkMode ? "#323236" : "#eee";
 
   const containerStyle = {
     flex: 1,
-    display: 'flex' as 'flex',
-    alignItems: 'center' as 'center',
-    justifyContent: 'start' as 'flex-start',
-    backgroundColor: isDarkMode ? '#222' : '#fff',
+    display: "flex" as "flex",
+    alignItems: "center" as "center",
+    justifyContent: "start" as "flex-start",
+    backgroundColor: backgroundColor,
     padding: 20,
   };
 
@@ -20,21 +21,22 @@ const ConfiguracoesScreen = () => {
     borderWidth: 0.5,
     padding: 10,
     borderRadius: 10,
-    borderColor: "#ddd",
-    width: '100%' as '100%',
+    borderColor: backgroundColor,
+    backgroundColor: isDarkMode ? "#424242" : "white",
+    width: "100%" as "100%",
     marginBottom: 10,
-    display: 'flex' as 'flex',
-    flexDirection: 'row' as 'row',
-    alignItems: 'center' as 'center',
-    justifyContent: 'space-between' as 'space-between',
-    shadowColor: 'black',
+    display: "flex" as "flex",
+    flexDirection: "row" as "row",
+    alignItems: "center" as "center",
+    justifyContent: "space-between" as "space-between",
+    shadowColor: "black",
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
     shadowRadius: 2,
   };
 
   const textStyle = {
-    color: isDarkMode ? 'white' : 'black',
+    color: isDarkMode ? "white" : "black",
     marginRight: 10,
     flex: 1,
   };
@@ -48,7 +50,5 @@ const ConfiguracoesScreen = () => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({});
 
 export default ConfiguracoesScreen;

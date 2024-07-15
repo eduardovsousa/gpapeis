@@ -28,7 +28,7 @@ const TabLayout = () => {
               <HomeIcon color={color} focused={focused} />
             </View>
           ),
-          tabBarLabelStyle: { color: colorScheme === 'dark' ? 'white' : 'black' }
+          tabBarLabelStyle: { color: colorScheme === 'dark' ? '#b8b6b6' : '#b8b6b6', fontWeight: 'bold' }
         }}
       />
       <Tabs.Screen
@@ -40,7 +40,7 @@ const TabLayout = () => {
               <ProductIcon color={color} focused={focused} />
             </View>
           ),
-          tabBarLabelStyle: { color: colorScheme === 'dark' ? 'white' : 'black' }
+          tabBarLabelStyle: { color: colorScheme === 'dark' ? '#b8b6b6' : '#b8b6b6', fontWeight: 'bold' }
         }}
       />
       <Tabs.Screen
@@ -52,7 +52,7 @@ const TabLayout = () => {
               <StockIcon color={color} focused={focused} />
             </View>
           ),
-          tabBarLabelStyle: { color: colorScheme === 'dark' ? 'white' : 'black' }
+          tabBarLabelStyle: { color: colorScheme === 'dark' ? '#b8b6b6' : '#b8b6b6', fontWeight: 'bold' }
         }}
       />
       <Tabs.Screen
@@ -64,7 +64,7 @@ const TabLayout = () => {
               <SettingsIcon color={color} focused={focused} />
             </View>
           ),
-          tabBarLabelStyle: { color: colorScheme === 'dark' ? 'white' : 'black' }
+          tabBarLabelStyle: { color: colorScheme === 'dark' ? '#b8b6b6' : '#b8b6b6', fontWeight: 'bold' }
         }}
       />
       <Tabs.Screen
@@ -76,7 +76,7 @@ const TabLayout = () => {
               <MenuIcon color={color} focused={focused} />
             </View>
           ),
-          tabBarLabelStyle: { color: colorScheme === 'dark' ? 'white' : 'black' }
+          tabBarLabelStyle: { color: colorScheme === 'dark' ? '#b8b6b6' : '#b8b6b6', fontWeight: 'bold' }
         }}
       />
     </Tabs>

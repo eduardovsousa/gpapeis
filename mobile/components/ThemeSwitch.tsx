@@ -16,7 +16,7 @@ const ThemeSwitch = () => {
   const toggleSwitch = () => {
     setIsOn(!isOn);
     toggleTheme();
-    offset.value = withSpring(isOn ? 0 : 2, {
+    offset.value = withSpring(isOn ? 0 : 1, {
       stiffness: 700,
       damping: 30,
     });
@@ -24,14 +24,14 @@ const ThemeSwitch = () => {
 
   const animatedStyle = useAnimatedStyle(() => {
     return {
-      transform: [{ translateX: offset.value * 16 }],
+      transform: [{ translateX: offset.value * 32 }],
     };
   });
 
   return (
     <View style={[styles.container, isOn ? styles.containerDark : styles.containerLight]}>
       <TouchableOpacity onPress={toggleSwitch} style={styles.switchContainer}>
-        <Animated.View style={[styles.circle, { backgroundColor: isDarkMode ? '#222' : 'white' }, animatedStyle]}>
+        <Animated.View style={[styles.circle, { backgroundColor: isDarkMode ? '#323236' : 'white' }, animatedStyle]}>
           {isOn ? (
             <MoonIcon />
           ) : (
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     shadowRadius: 2,
   },
   containerDark: {
-    backgroundColor: '#222',
+    backgroundColor: '#323236',
     width: 80,
   },
   switchContainer: {

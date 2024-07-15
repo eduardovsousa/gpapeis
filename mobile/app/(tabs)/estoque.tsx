@@ -1,5 +1,5 @@
-import { useTheme } from '@/components/ThemeContext';
 import { Text, View } from 'react-native';
+import { useTheme } from '@/components/ThemeContext';
 
 const EstoqueScreen = () => {
   const { colorScheme } = useTheme();
@@ -17,7 +17,7 @@ const EstoqueScreen = () => {
     fontSize: 16,
   };
 
-  const backgroundColor = isDarkMode ? '#222' : '#fff';
+  const backgroundColor = isDarkMode ? '#323236' : '#eee';
 
   return (
     <View style={[containerStyle, { backgroundColor }]}>
